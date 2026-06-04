@@ -1,84 +1,85 @@
-# 💼 Tech Layoffs Data Analysis (SQL Project)
+# Tech Layoffs Workforce Analysis
 
-### 📌 Overview
-This project explores global **tech layoffs data** from 2020–2023 using **MySQL**.  
-It is divided into two phases — **Data Cleaning** and **Exploratory Data Analysis (EDA)** — to uncover key trends across industries, companies, and time periods.
+## Overview
+This project analyzes global tech layoffs between 2020 and 2024 using SQL. The goal was to clean raw layoff data, explore workforce reduction trends, and generate business insights across companies, industries, countries, and time periods.
 
----
+The project follows a typical analytics workflow:
+1. Data Cleaning
+2. Exploratory Data Analysis (EDA)
+3. Business Insights
 
-### ⚙️ Tools & Skills Used
-- **SQL (MySQL)** — Data cleaning, analysis, and transformation  
-- **Window Functions**, **CTEs**, and **Aggregate Queries**  
-- **Data Standardization** and **Null Handling**  
-- **Excel/CSV Integration** for importing raw data  
+## Dataset
 
----
+- 2,361 layoff records
+- Multiple countries and industries
+- Time period: 2020–2024
 
-### 🧹 Phase 1: Data Cleaning
-Performed a complete cleaning process using `Data_cleaning_layoffs.sql`:
-- Removed **duplicate entries** using `ROW_NUMBER()`  
-- Standardized inconsistent formats (e.g., `industry`, `country`, and `date`)  
-- Fixed **NULL** and blank fields  
-- Created a **staging table** for clean and reliable analysis  
+## Business Questions Explored
 
----
+- Which companies experienced the highest layoffs?
+- Which industries were most affected?
+- Which countries recorded the largest workforce reductions?
+- How did layoffs change over time?
+- What trends emerged after 2022?
+- Which industries were most impacted year-over-year?
 
-### 📊 Phase 2: Exploratory Data Analysis (EDA)
-Conducted deeper trend analysis using `EDA_PROJECT_1.sql`:
-- Identified **top companies** and **industries** affected by layoffs  
-- Analyzed **yearly and monthly layoff patterns**  
-- Created **rolling totals** for trend observation  
-- Ranked industries by total layoffs using **CTEs** and **DENSE_RANK()**  
+## Tools & Skills Used
 
----
+- SQL (MySQL)
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- CTEs
+- Window Functions
+- Aggregate Queries
+- DENSE_RANK()
+- Data Standardization
+- Business Intelligence
 
-### 📈 Key Insights
-- **2023** recorded the highest layoffs globally  
-- **Technology** and **Crypto** sectors were most impacted  
-- Major firms such as **Google**, **Meta**, and **Amazon** led global layoffs  
-- Layoffs increased significantly post-2022, showing a shift in hiring trends  
+## Phase 1: Data Cleaning
 
----
+Using Data_cleaning_layoffs.sql:
 
-### 🗂️ Project Structure
-```
-tech-layoffs-sql-analysis/
+- Removed duplicate records using ROW_NUMBER()
+- Standardized industry, country, and date formats
+- Fixed NULL and blank values
+- Created a clean staging table for analysis
+
+## Phase 2: Exploratory Data Analysis
+
+Using EDA PROJECT 1.sql:
+
+- Analyzed layoffs by company, industry, and country
+- Identified yearly and monthly layoff trends
+- Created rolling monthly totals
+- Ranked industries and companies using DENSE_RANK()
+- Generated trend-based business insights
+
+## Key Insights
+
+- 2023 recorded the highest layoffs globally
+- Technology and Crypto sectors were among the most affected
+- Large technology firms experienced significant workforce reductions
+- Layoff activity increased substantially after 2022
+
+## Project Structure
+
+tech-layoffs-workforce-analysis/
 │
-├── layoffs.csv                  # Raw dataset
-├── Data_cleaning_layoffs.sql    # Data cleaning and transformation
-├── EDA_PROJECT_1.sql            # Exploratory data analysis
-└── README.md                    # Project documentation
-```
+├── layoffs.csv
+├── Data_cleaning_layoffs.sql
+├── EDA PROJECT 1.sql
+├── README.md
+└── screenshots/
 
----
+## Future Enhancements
 
-### 📚 How to Run
-1. Open MySQL Workbench or any SQL editor.  
-2. Import the dataset:  
-   ```sql
-   LOAD DATA INFILE 'layoffs.csv' 
-   INTO TABLE layoffs 
-   FIELDS TERMINATED BY ',' 
-   IGNORE 1 ROWS;
-   ```
-3. Run the `Data_cleaning_layoffs.sql` script first.  
-4. Then execute `EDA_PROJECT_1.sql` for analysis and insights.
+- Add Tableau dashboards
+- Add Power BI visualizations
+- Expand analysis by company size and region
+- Automate reporting workflows using Python
 
----
+## Author
 
-### 💡 Future Enhancements
-- Create an **interactive Tableau dashboard** for visual insights  
-- Automate data updates using Python or SQL scripts  
-- Expand dataset to include **company size and region-level breakdowns**
+Vihaan Sharad Kakarla
+GitHub: https://github.com/V3NOW
 
----
-
-### 👨‍💻 Author
-**Vihaan Sharad Kakarla**  
-📧 [vihaansharad23@gmail.com](mailto:vihaansharad23@gmail.com)  
-💻 [github.com/V3NOW](https://github.com/V3NOW)
-
----
-
-### 🏷️ Tags
-`SQL` `Data Cleaning` `EDA` `MySQL` `Tech Layoffs` `Data Analytics` `Business Intelligence` `Data Project`
